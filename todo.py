@@ -8,9 +8,10 @@ class TodoClass:
         self.todo = None 
         self.todo_file = "todos.txt"
         self.donetodos = "done_todos.txt"
-
-        # Check the existence of files and create them if not present
-        # Check the read and write permissions on the 'todos.txt' file
+        """
+        Check the existence of files and create them if not present
+        Check the read and write permissions on the 'todos.txt' file
+        """
         if not os.access(self.todo_file, os.R_OK | os.W_OK):
             print("No permission to read and write to the 'todos.txt' file.")
             exit(1)
