@@ -36,7 +36,7 @@ class TodoClass:
             todo (str): The todo to be added.
         """
         with open(self.todo_file, "+a") as f:
-            f.write(f".{todo}\n")
+            f.write(f"-{todo}\n")
             print(f"{todo} has been added.")
 
     def all_todos(self):
@@ -104,12 +104,15 @@ if __name__ == "__main__":
     done = False
     while not done:
         # Display menu options to the user
-        print("""1. Enter todo
+        print("""
+-----------------------
+1. Enter todo
 2. See todos
 3. Remove todo
 4. Remove all todos
 5. See removed todos
-Q. Quit""")
+Q. Quit
+-----------------------""")
         
         user_order = input("What do you want to do: ")
         if user_order == "1":
